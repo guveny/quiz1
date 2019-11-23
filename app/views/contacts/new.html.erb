@@ -1,0 +1,15 @@
+<br />
+<p>Contacts List</p>
+<%= simple_form_for @contact do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :fname %>
+  <%= f.input :lname %>
+  <%= f.input :pnumber %>
+
+  <%= f.input :email, input_html: { autocomplete: 'email' } %>
+
+
+  <%= f.button :submit, class: "btn-primary" %>
+  <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
+<% end %>
